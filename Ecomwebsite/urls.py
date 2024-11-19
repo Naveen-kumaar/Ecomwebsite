@@ -21,5 +21,6 @@ from Eapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('demo/',views.demo ,name='demo'),
-    path('detail/',views.detail,name='detail')
+    path('detail/<int:id>',views.detail,name='detail'),
+    path('response/<str:course>',views.new,name='new')
 ]
